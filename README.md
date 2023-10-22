@@ -27,3 +27,10 @@ sudo apt-get install iverilog
 ```
 Invoke using iverilog
 ![iverilog](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b98bd0de-8f4f-4e14-9214-31cd299fa0b2)
+__Gtkwave installation__
+```
+sudo apt update
+sudo apt install gtkwave
+```
+![iverilog](https://github.com/sathyakanthv/VSDHDP/assets/4946509/044cefd0-b43d-44ef-909c-90b6eb519aaf)
+
