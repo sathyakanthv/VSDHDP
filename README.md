@@ -18,3 +18,21 @@ $ make <br>
 $ sudo make install <br>
 Invoke using yosys <br>
 ![yosys](https://github.com/sathyakanthv/VSDHDP/assets/4946509/9b4ee86d-35b4-403d-851e-c34492411a89)
+__Installation Flow__
+```
+$ mkdir yosys-master
+$ cd yosys-master
+$ git clone https://github.com/YosysHQ/yosys.git
+$ sudo apt install make(installing make if you havent done it yet)
+$ sudo apt-get install build-essential clang bison flex \
+    libreadline-dev gawk tcl-dev libffi-dev git \
+    graphviz xdot pkg-config python3 libboost-system-dev \
+    libboost-python-dev libboost-filesystem-dev zlib1g-dev
+$ cd yosys-master/yosys/
+$ make
+$ sudo install make
+
+if it doesn't work ( version mismatch might occur when combining other open software )
+$ sudo apt install yosys
+$ sudo apt upgrade
+```
