@@ -23,7 +23,7 @@ Invoke using yosys <br>
 ![yosys](https://github.com/sathyakanthv/VSDHDP/assets/4946509/9b4ee86d-35b4-403d-851e-c34492411a89)
 __iverilog Installation Flow__
 ```
-sudo apt-get install iverilog <br>
+sudo apt-get install iverilog
 ```
 Invoke using iverilog
 ![iverilog](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b98bd0de-8f4f-4e14-9214-31cd299fa0b2)
