@@ -34,3 +34,17 @@ sudo apt install gtkwave
 ```
 ![iverilog](https://github.com/sathyakanthv/VSDHDP/assets/4946509/044cefd0-b43d-44ef-909c-90b6eb519aaf)
 
+**Assignment**: Introduction to Verilog RTL Design and Synthesis <br>
+**Definitions**
+**RTL Design**: RTL Design is checked for adherence to spec by simulating the design. The Design is a verilog code(or a set of verilog codes) which has the intended functionality to meet the requirements. <br>
+**Test bench**: Test bench is the setup to apply stimulus (test_vectors) to the design to check its functionality. 
+**Note**: Simulator checks for changes on input signal. No change in input means, no change in output. 
+
+**Implementation example**:
+1. The Design and Test bench are the inputs to the simulator which generates a VCD file (Value Change Dump). This is then processed by GTKWave to obtain the waveform which would enable us to verify the functionality.  <br>
+2. The verilog design and the library files were cloned from : https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git <br>
+3. The Design we are using to test is a 2X1 Multiplexer. File name is good_mux.v and test bench is tb_good_mux.v <br>
+
+**Invoke using iverilog**
+
+
