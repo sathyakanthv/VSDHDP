@@ -46,7 +46,8 @@ sudo apt install gtkwave
 3. The Design we are using to test is a 2X1 Multiplexer. File name is good_mux.v and test bench is tb_good_mux.v <br>
 
 **Invoke using iverilog**<br>
-Syntax: iverilog design_name.v test_bench_design_name.v <br>
+Syntax:<br> 
+iverilog design_name.v test_bench_design_name.v <br>
 ./a.out //generates vcd file <br> 
 gtkwave test_bench_design_name.vcd
 ```
