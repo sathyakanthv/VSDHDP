@@ -45,6 +45,14 @@ sudo apt install gtkwave
 2. The verilog design and the library files were cloned from : https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git <br>
 3. The Design we are using to test is a 2X1 Multiplexer. File name is good_mux.v and test bench is tb_good_mux.v <br>
 
-**Invoke using iverilog**
-
+**Invoke using iverilog**<br>
+Syntax: iverilog design_name.v test_bench_design_name.v <br>
+./a.out //generates vcd file <br> 
+gtkwave test_bench_design_name.vcd
+```
+iverilog good_mux.v tb_good_mux.v
+./a.out
+gtkwave tb_good_mux.vcd
+```
+![good_mux_test](https://github.com/sathyakanthv/VSDHDP/assets/4946509/11e521a7-8fb0-4ed8-98db-538a50aacb11)
 
