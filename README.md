@@ -57,3 +57,6 @@ gtkwave tb_good_mux.vcd
 ```
 ![good_mux_test](https://github.com/sathyakanthv/VSDHDP/assets/4946509/11e521a7-8fb0-4ed8-98db-538a50aacb11)
 
+![yosys_21mux](https://github.com/sathyakanthv/VSDHDP/assets/4946509/bca6c9eb-251d-4752-8651-347b85b279b8)
+
+![yosys_show_goodmux](https://github.com/sathyakanthv/VSDHDP/assets/4946509/3806eb1b-90ba-4d65-83b3-4bb7dfc41050)
