@@ -69,7 +69,12 @@ show
 ![yosys_21mux](https://github.com/sathyakanthv/VSDHDP/assets/4946509/bca6c9eb-251d-4752-8651-347b85b279b8)
 **Synthesis to actual design**:
 ![yosys_show_goodmux](https://github.com/sathyakanthv/VSDHDP/assets/4946509/3806eb1b-90ba-4d65-83b3-4bb7dfc41050)
-Netlist:
+**Netlist Generation**:<br>
+```
+Syntax:
+write_verilog design_name_netlist.v
+write_verilog -noattr design_name_netlist.v
+```
 ![yosys_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/c4cce608-365f-4371-9d76-3512ed37ca12)
-Simplified Netlist:
+**Simplified Netlist without attr**:
 ![yosys_mux_simplified_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/18422509-34ab-47f3-b244-28c65e238d6a)
