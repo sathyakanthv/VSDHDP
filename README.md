@@ -37,7 +37,7 @@ sudo apt install gtkwave
 **Assignment**: Introduction to Verilog RTL Design and Synthesis <br>
 **Definitions**
 **RTL Design**: RTL Design is checked for adherence to spec by simulating the design. The Design is a verilog code(or a set of verilog codes) which has the intended functionality to meet the requirements. <br>
-**Test bench**: Test bench is the setup to apply stimulus (test_vectors) to the design to check its functionality. 
+**Test bench**: Test bench is the setup to apply stimulus (test_vectors) to the design to check its functionality. <br>
 **Note**: Simulator checks for changes on input signal. No change in input means, no change in output. 
 
 **Implementation example**:
