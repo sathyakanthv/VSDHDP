@@ -81,3 +81,13 @@ write_verilog -noattr design_name_netlist.v
 **Simplified Netlist without attr**:
 ![yosys_mux_simplified_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/18422509-34ab-47f3-b244-28c65e238d6a)
 ## Day 2
+Introduction to library file - notation and naming. <br>
+The . lib (library) file consists of all the information on the electrical behaviour of the std cells used in the Chip design. It includes area, power for various standard cells. <br>
+Different flavours are used as per the requirement of operation as in slow, medium or fast. <br>
+Combinational logic delay in logic path determines the speed of operation of digital logic circuits. <br>
+We have to consider setup time, and hold time and what happens if there are any violations.<br>
+Difference between faster and slower cells and where to use which one. This selection of specific cells means that there are synthesis constraints. <br>
+What is PVT (Process-Voltage-Temperature) and what variations or how the libs will be characterised to model the PVTs.<br>
+What information is seen in a .lib file and how is it written and how to understand this. <br>
+Hierarchical model and the flat model, differences in synthesis.<br>
+Flipflops and how to utilise. <br>
