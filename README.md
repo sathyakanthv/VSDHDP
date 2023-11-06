@@ -92,3 +92,37 @@ Introduction to library file - notation and naming. <br>
 7. What information is seen in a .lib file and how is it written and how to understand this. <br>
 8. Hierarchical model and the flat model, differences in synthesis.<br>
 9. Flipflops and how to utilise. <br>
+```
+Syntax:
+Invoke using 'yosys'
+read_liberty -lib ../path_of_library_file/Library.lib
+read_verilog design_name.v
+synth -top module_name 
+abc -liberty ../path_of_library_file/Library.lib
+show
+```
+**Synthesis**:
+![submodule_show_1](https://github.com/sathyakanthv/VSDHDP/assets/4946509/c0fab1da-19dc-4ee8-8e70-5442b0653b0b)
+**Netlist**:
+![netlist_multiple_modules1](https://github.com/sathyakanthv/VSDHDP/assets/4946509/430c8479-a549-4bb3-844f-9b7160f6f05c)
+**After using Flatten**:
+```
+Syntax:
+flatten
+write_verilog -noattr verilog_file.v
+```
+![flatten_netlist_show1](https://github.com/sathyakanthv/VSDHDP/assets/4946509/9916140a-1ac0-4dd3-bb3a-a21adbd60054)
+**Netlist**:
+![flatten_multiple_modules_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1cb97b5a-cbce-416f-ac25-3e9cba741a86)
+**For Submodule (individual)**:
+```
+Syntax(invoke yosys if you haven't already): 
+read_liberty -lib ../path_of_library_file/Library.lib
+read_verilog ../path_verilog_file/
+synth -top submodule_name 
+abc -liberty ../path_of_library_file/Library.lib
+show
+```
+**Submodule Synthesis**:
+![submodule_1_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/9ab47b5c-fd69-402a-8004-55d370e27f72)
+
