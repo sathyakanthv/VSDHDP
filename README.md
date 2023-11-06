@@ -80,6 +80,7 @@ write_verilog -noattr design_name_netlist.v
 ![yosys_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/c4cce608-365f-4371-9d76-3512ed37ca12)
 **Simplified Netlist without attr**:
 ![yosys_mux_simplified_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/18422509-34ab-47f3-b244-28c65e238d6a)
+
 ## Day 2
 Introduction to library file - notation and naming. <br>
 The . lib (library) file consists of all the information on the electrical behaviour of the std cells used in the Chip design. It includes area, power for various standard cells. <br>
