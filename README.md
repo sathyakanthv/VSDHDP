@@ -159,6 +159,20 @@ gtkwave file_name.vcd
 **Waveform for Asynchronous Set**:
 ![tb_dff_async_set_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/db8f9fa4-fdef-46a2-a81a-c986c61ac873)
 
+**Synthesis for Asynchronous set**:
+1.Checking for synthesis, here we would specify the library for the dff using dfflibmap command. In this case, everything is in the same library, there is not much change noticed in the paths. <br>
+```
+Syntax: Invoke using yosys. Following are the commands:
+read_liberty -lib ../path_of_library_file/Library.lib
+read_verilog design_verilog_file.v
+synth -top module_name
+dfflibmap -liberty <path library>
+abc -liberty ../path_of_library_file/Library.lib
+show 
+```
+**Synthesis for Asynchronous set-Show**:
+![aync_set_show_synth](https://github.com/sathyakanthv/VSDHDP/assets/4946509/49835ac4-8a64-4ef3-90a8-ad382699b970)
+
 **For Simulation (Synchronous Reset)**:
 ```
 Syntax: 
@@ -169,4 +183,17 @@ gtkwave file_name.vcd
 **Waveform for Synchronous Reset**:
 ![tb_dff_syncres_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1b3a51d3-421e-4594-82bf-951c9c7fe69a)
 
+**Synthesis for synchronous set**:
+1.Checking for synthesis, here we would specify the library for the dff using dfflibmap command. In this case, everything is in the same library, there is not much change noticed in the paths. <br>
+```
+Syntax: Invoke using yosys. Following are the commands:
+read_liberty -lib ../path_of_library_file/Library.lib
+read_verilog design_verilog_file.v
+synth -top module_name
+dfflibmap -liberty <path library>
+abc -liberty ../path_of_library_file/Library.lib
+show 
+```
+**Synthesis for synchronous set-Show**:
+![sync_reset_v](https://github.com/sathyakanthv/VSDHDP/assets/4946509/93320188-96d1-4e32-a02b-618509844129)
 
