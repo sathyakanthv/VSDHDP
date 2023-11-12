@@ -125,4 +125,32 @@ show
 ```
 **Submodule Synthesis**:
 ![submodule_1_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/9ab47b5c-fd69-402a-8004-55d370e27f72)
+**For Simulation (Asynchronous Reset)**:
+```
+Syntax: 
+iverilog verilog_file_name.v tb_file_name.v
+./a.out
+gtkwave file_name.vcd
+```
+**Waveform for Asynchronous Reset**:
+![tb_dff_asyncres_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/0ea12b7c-a1a2-457b-a989-8448aaba5ed7)
+**For Simulation (Asynchronous Set)**:
+```
+Syntax: 
+iverilog verilog_file_name.v tb_file_name.v
+./a.out
+gtkwave file_name.vcd
+```
+**Waveform for Asynchronous Set**:
+![tb_dff_async_set_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/db8f9fa4-fdef-46a2-a81a-c986c61ac873)
+**For Simulation (Synchronous Reset)**:
+```
+Syntax: 
+iverilog verilog_file_name.v tb_file_name.v
+./a.out
+gtkwave file_name.vcd
+```
+**Waveform for Synchronous Reset**:
+![tb_dff_syncres_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1b3a51d3-421e-4594-82bf-951c9c7fe69a)
+
 
