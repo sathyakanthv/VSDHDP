@@ -135,6 +135,20 @@ gtkwave file_name.vcd
 **Waveform for Asynchronous Reset**:
 ![tb_dff_asyncres_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/0ea12b7c-a1a2-457b-a989-8448aaba5ed7)
 
+**Synthesis for Asynchronous reset**:
+1.Checking for synthesis, here we would specify the library for the dff using dfflibmap command. In this case, everything is in the same library, there is not much change noticed in the paths. <br>
+```
+Syntax: Invoke using yosys. Following are the commands:
+read_liberty -lib ../path_of_library_file/Library.lib
+read_verilog design_verilog_file.v
+synth -top module_name
+dfflibmap -liberty <path library>
+abc -liberty ../path_of_library_file/Library.lib
+show 
+```
+**Synthesis for Asynchronous reset-Show**:
+![asyncres_show_synth](https://github.com/sathyakanthv/VSDHDP/assets/4946509/c280f072-8c79-42fd-aa32-c6f82c33d0c7)
+
 **For Simulation (Asynchronous Set)**:
 ```
 Syntax: 
