@@ -197,3 +197,5 @@ show
 **Synthesis for synchronous set-Show**:
 ![sync_reset_v](https://github.com/sathyakanthv/VSDHDP/assets/4946509/93320188-96d1-4e32-a02b-618509844129)
 
+## Day 3: Combinational and Sequential optimisations (logical)
+
