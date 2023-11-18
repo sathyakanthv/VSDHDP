@@ -291,6 +291,21 @@ gtkwave <tb_design_verilog_file.vcd>
 **Waveform for  DFF1**:
 ![dff_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ec9b3afb-e016-4a21-b32c-96afd80a9277)
 
+**Synthesis for DFF1 (Sequential)**:
+```
+Invoke yosys first.
+Syntax:
+read_liberty -lib <library_file_path>
+read_verilog <design_verilog.v>
+synth -top <top_module_name>
+dfflibmap -liberty <library_file_path>
+abc -liberty <library_file_path>
+show
+```
+**Netlist-show for  DFF1**:
+![dff1_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1f5f95ff-2236-4af0-b712-affb8630ba02)
+
+
 **For DFF2 (Sequential)**:
 ```
 Syntax:
@@ -300,6 +315,20 @@ gtkwave <tb_design_verilog_file.vcd>
 ```
 **Waveform for  DFF2**:
 ![dff2_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/8ed7aa48-ceee-402a-ad76-e27d2079c985)
+
+**Synthesis for DFF2 (Sequential)**:
+```
+Invoke yosys first.
+Syntax:
+read_liberty -lib <library_file_path>
+read_verilog <design_verilog.v>
+synth -top <top_module_name>
+dfflibmap -liberty <library_file_path>
+abc -liberty <library_file_path>
+show
+```
+**Netlist-show for  DFF2**:
+![dff2_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/abc38572-1213-4584-aad3-a933c6e801bf)
 
 **For DFF3 (Sequential)**:
 ```
@@ -311,6 +340,20 @@ gtkwave <tb_design_verilog_file.vcd>
 **Waveform for  DFF3**:
 ![dff3_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/bcb66be9-3846-4991-b01c-4ec3aa9293f9)
 
+**Synthesis for DFF3 (Sequential)**:
+```
+Invoke yosys first.
+Syntax:
+read_liberty -lib <library_file_path>
+read_verilog <design_verilog.v>
+synth -top <top_module_name>
+dfflibmap -liberty <library_file_path>
+abc -liberty <library_file_path>
+show
+```
+**Netlist-show for  DFF3**:
+![dff3_const_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/675a04d5-dec4-48e4-bca0-27b3ba877e62)
+
 **For DFF4 (Sequential)**:
 ```
 Syntax:
@@ -321,6 +364,20 @@ gtkwave <tb_design_verilog_file.vcd>
 **Waveform for  DFF4**:
 ![dff4_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b67d2652-f554-4b35-ac43-7f6bc07fe715)
 
+**Synthesis for DFF4 (Sequential)**:
+```
+Invoke yosys first.
+Syntax:
+read_liberty -lib <library_file_path>
+read_verilog <design_verilog.v>
+synth -top <top_module_name>
+dfflibmap -liberty <library_file_path>
+abc -liberty <library_file_path>
+show
+```
+**Netlist-show for  DFF4**:
+![dff4_const_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b6ba2bad-1e93-49e8-9671-f833bd9c7c9a)
+
 **For DFF5 (Sequential)**:
 ```
 Syntax:
@@ -330,4 +387,18 @@ gtkwave <tb_design_verilog_file.vcd>
 ```
 **Waveform for  DFF5**:
 ![dff5_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/724d9785-7378-4f1a-a77d-1344058fa9f9)
+
+**Synthesis for DFF5 (Sequential)**:
+```
+Invoke yosys first.
+Syntax:
+read_liberty -lib <library_file_path>
+read_verilog <design_verilog.v>
+synth -top <top_module_name>
+dfflibmap -liberty <library_file_path>
+abc -liberty <library_file_path>
+show
+```
+**Netlist-show for  DFF5**:
+![dff5_const_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ba261c17-6719-4375-b478-970f9348a90e)
 
