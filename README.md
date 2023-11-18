@@ -280,3 +280,54 @@ show
 ```
 **Synthesis for  multiple_module_opt2**:
 ![multiple_module_opt2_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/6c23d2e7-10b7-4691-8f56-10f27bdf0fa3)
+
+**For DFF1 (Sequential)**:
+```
+Syntax:
+iverilog <design_verilog_file.v> <tb_design_verilog_file.v>
+./a.out
+gtkwave <tb_design_verilog_file.vcd>
+```
+**Waveform for  DFF1**:
+![dff_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ec9b3afb-e016-4a21-b32c-96afd80a9277)
+
+**For DFF2 (Sequential)**:
+```
+Syntax:
+iverilog <design_verilog_file.v> <tb_design_verilog_file.v>
+./a.out
+gtkwave <tb_design_verilog_file.vcd>
+```
+**Waveform for  DFF2**:
+![dff2_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/8ed7aa48-ceee-402a-ad76-e27d2079c985)
+
+**For DFF3 (Sequential)**:
+```
+Syntax:
+iverilog <design_verilog_file.v> <tb_design_verilog_file.v>
+./a.out
+gtkwave <tb_design_verilog_file.vcd>
+```
+**Waveform for  DFF3**:
+![dff3_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/bcb66be9-3846-4991-b01c-4ec3aa9293f9)
+
+**For DFF4 (Sequential)**:
+```
+Syntax:
+iverilog <design_verilog_file.v> <tb_design_verilog_file.v>
+./a.out
+gtkwave <tb_design_verilog_file.vcd>
+```
+**Waveform for  DFF4**:
+![dff4_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b67d2652-f554-4b35-ac43-7f6bc07fe715)
+
+**For DFF5 (Sequential)**:
+```
+Syntax:
+iverilog <design_verilog_file.v> <tb_design_verilog_file.v>
+./a.out
+gtkwave <tb_design_verilog_file.vcd>
+```
+**Waveform for  DFF5**:
+![dff5_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/724d9785-7378-4f1a-a77d-1344058fa9f9)
+
