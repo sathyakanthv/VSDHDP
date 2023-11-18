@@ -201,3 +201,82 @@ show
 1. Area and power savings are achieved when we perform combinational and Sequential optimisations.<br>
 2. The combinational optimisations are Constant propagation and Boolean optmisation. <br>
 3. The Sequential optimisations are categorised as Basic (Sequential constant propagation) and Advanced (State optimisation, Retiming, Sequential logic cloning). <br>
+**For Opt_check (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for Opt_check-Show**:
+![opt_check_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1645056e-7d39-48d8-b3b9-41417ee28bdb)
+
+**For Opt_check2 (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for Opt_check2-Show**:
+![opt_check2_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/c2d94f02-5776-4e6c-a715-c8ed287ad442)
+
+**For Opt_check3 (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for Opt_check3-Show**:
+![opt_check3_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/5bdc8e65-e0ce-4efc-ba9b-e81d1a7426be)
+
+**For Opt_check4 (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for Opt_check4-Show**:
+![opt_check4](https://github.com/sathyakanthv/VSDHDP/assets/4946509/dd8fcb37-0d6d-423a-ae4b-fc36a37896b2)
+
+**For multiple_module_opt (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+flatten
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for  multiple_module_opt**:
+![multiple_module_opt_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1f090644-8300-42a9-8332-33c9a9613bf0)
+
+**For multiple_module_opt2 (Combinational)**:
+```
+Syntax: 
+read_liberty -lib <library_file_path>
+read_verilog <verilog_file>
+synth -top <module_name>
+flatten
+opt_clean -purge
+abc -liberty <library_file>
+show
+```
+**Synthesis for  multiple_module_opt2**:
+![multiple_module_opt2_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/6c23d2e7-10b7-4691-8f56-10f27bdf0fa3)
