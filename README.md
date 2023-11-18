@@ -402,3 +402,5 @@ show
 **Netlist-show for  DFF5**:
 ![dff5_const_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ba261c17-6719-4375-b478-970f9348a90e)
 
+## Day 3: Combinational and Sequential optimisations (logical)
+1. GLS blocking vs non-blocking. 
