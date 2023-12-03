@@ -402,5 +402,125 @@ show
 **Netlist-show for  DFF5**:
 ![dff5_const_waveform](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ba261c17-6719-4375-b478-970f9348a90e)
 
-## Day 3: Combinational and Sequential optimisations (logical)
+## Day 4: Gate Level Simulation: Blocking vs non-blocking, Synth-Simulation mismatch. 
 1. GLS blocking vs non-blocking. 
+
+Codes have been obtained from:<br>
+https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git for ternary_operator_mux.v, bad_mux.v, and blocking_caveat.v <br>
+
+**Simulation, Synthesis and GLS for the ternary operator mux**:
+```
+Syntax:
+iverilog <ternary_operator_mux.v> <tb_ternary_operator_mux.v>
+./a.out 
+gtkwave tb_ternary_operator_mux.vcd
+```
+RTL Netlist Screenshot:
+![ternary_op_mux_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/7205c68f-5208-4da4-9e94-8402f4de4fb9)
+Synth and GLS Netlist steps:
+```
+Syntax:
+yosys> read_liberty -lib <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <ternary_operator_mux.v>
+yosys> synth -top <ternary_operator_mux>
+yosys> abc -liberty <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> write_verilog -noattr <ternary_operator_mux_net.v>
+yosys> show
+```
+Synthesized design:
+![ternary_op_mux_synth_show](https://github.com/sathyakanthv/VSDHDP/assets/4946509/6f5110c1-b87c-4507-88a1-6318766a17eb)
+
+GLS Netlist:
+![ternary_op_mux_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/5e9f9aff-9fda-4bcf-972c-187882541492)
+
+GLS Simulation:
+```
+Syntax:
+iverilog <verilog_model_path: ../mylib/verilog_model/primitives.v> <library_file_path: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib> <netlist_file: ternary_operator_mux_net.v> <Testbench_file: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+GLS netlist: <br>
+1. Match and see if it matches with the original simulation of RTL Netlist.
+2. It does match. 
+![ternary_op_mux_glsop](https://github.com/sathyakanthv/VSDHDP/assets/4946509/b0911656-ad15-45bf-926a-edb452c6ad06)
+<br>
+**Simulation, Synthesis and GLS for the bad_mux**:
+```
+Syntax:
+iverilog <bad_mux.v> <tb_bad_mux.v>
+./a.out 
+gtkwave tb_bad_mux.vcd
+```
+RTL Netlist Screenshot:
+![bad_mux_wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/621e36a9-5482-43f9-b995-d425831fc436)
+Synth and GLS Netlist steps:
+```
+Syntax:
+yosys> read_liberty -lib <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <bad_mux.v>
+yosys> synth -top <bad_mux>
+yosys> abc -liberty <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> write_verilog -noattr <bad_mux_net.v>
+yosys> show
+```
+Synthesized design:
+
+GLS Netlist:
+![bad_mux_netlist](https://github.com/sathyakanthv/VSDHDP/assets/4946509/ec804d41-58be-4d79-8a1f-c36fd7a86d21)
+
+GLS Simulation:
+```
+Syntax:
+iverilog <verilog_model_path: ../mylib/verilog_model/primitives.v> <library_file_path: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib> <netlist_file: bad_mux_net.v> <Testbench_file: tb_bad_mux.v>
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+GLS netlist: <br>
+1. Match and see if it matches with the original simulation of RTL Netlist.
+2. It does not match. There is a mismatch with the RTL Simulation.
+![bad_mux_wave_compare2](https://github.com/sathyakanthv/VSDHDP/assets/4946509/0d3f5fac-cc47-4ae2-88c6-8b1bcd6c6438)
+<br>
+**Simulation, Synthesis and GLS for the Blocking Caveat**:
+```
+Syntax:
+iverilog <blocking_caveat.v> <tb_blocking_caveat.v>
+./a.out 
+gtkwave tb_blocking_caveat.vcd
+```
+RTL Netlist Screenshot:
+![tb_blocking_caveat wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/e124502c-48d6-4297-8ca4-cecdbe1f26ee)
+
+Synth and GLS Netlist steps:
+```
+Syntax:
+yosys> read_liberty -lib <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> read_verilog <blocking_caveat.v>
+yosys> synth -top <blocking_caveat>
+yosys> abc -liberty <path_of_sky130_fd_sc_hd__tt_025C_1v80.lib>
+yosys> write_verilog -noattr <blocking_caveat_net.v>
+yosys> show
+```
+Synthesized design:
+![tb](https://github.com/sathyakanthv/VSDHDP/assets/4946509/1f2e6ac6-55ba-47eb-acd0-0741cf189ad8)
+
+GLS Simulation:
+```
+Syntax:
+iverilog <verilog_model_path: ../mylib/verilog_model/primitives.v> <library_file_path: ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib> <netlist_file: blocking_caveat_net.v> <Testbench_file: tb_blocking_caveat.v>
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+GLS netlist: <br>
+1. Match and see if it matches with the original simulation of RTL Netlist.
+2. It does not match. There is a mismatch with the RTL Simulation.
+![tb_blocking_caveat wave](https://github.com/sathyakanthv/VSDHDP/assets/4946509/e227fe44-30e2-479a-8b21-60c1f834e9fe)
+
+## Day 5: RISC V Waterlevel Detector
+Objective:
+1. A contactless Water level indicator is to be assessed and designed, automate the process.
+2. The water level indicator is equipped with a buzzer. Functionality is that when an empty bottle is placed underneath it, the purifier will fill the bottle till the water level reaches the sensors position within the purifier.
+
+
+
+
